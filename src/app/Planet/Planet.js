@@ -9,6 +9,10 @@ module.exports = class Planet {
         this.gravity = gravity;
     }
 
+    getId() {
+        return this.id;
+    }
+
     getName() {
         return this.name;
     }
