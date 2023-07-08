@@ -1,10 +1,12 @@
-class Planet {
-    constructor(id){
-        throw new Error('To be implemented');
+module.exports = class Planet {
+    constructor(id) {
+        this.id = id;
     }
 
-    async init(){
-        throw new Error('To be implemented');
+    async init(config = {}) {
+        const { name = '', gravity = '' } = config;
+        this.name = name;
+        this.gravity = gravity;
     }
 
     getName() {

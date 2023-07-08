@@ -8,11 +8,19 @@ class AbstractPeople {
     }
 
     async init(config = {}) {
-        this.name = config?.name;
-        this.mass = config?.mass;
-        this.height = config?.height;
-        this.homeworlId = config?.homeworld_id;
-        this.homeworldName = config?.homeworld_name;
+        if (config == null) return;
+        const { 
+            name = '',
+            mass = '',
+            height = 0,
+            homeworld_id = '',
+            homeworld_name = ''
+        } = config;
+        this.name = name;
+        this.mass = mass;
+        this.height = height;
+        this.homeworldId = homeworld_id;
+        this.homeworldName = homeworld_name;
     }
 
     getId() {
