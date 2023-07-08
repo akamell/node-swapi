@@ -23,7 +23,7 @@ const getPlanetByIdRequest = async (app, id, isWookiee) => {
     let name, gravity;
     if (isWookiee) {
         name = data.whrascwo;
-        gravity = data.acwoahrracao;
+        gravity = data.rrrcrahoahaoro;
     } else {
         name = data.name;
         gravity = data.gravity;
