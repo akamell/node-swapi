@@ -11,8 +11,8 @@ const getIdFromUrl = (url) => {
     return substringId.substring(substringId.lastIndexOf('/') + 1);
 }
 
-const getRandomInt = (max) => {
-    return Math.floor(Math.random() * max);
+const getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * max) + min;
 }
 
 module.exports = {

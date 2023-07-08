@@ -4,8 +4,8 @@ const { getWeightOnPlanet } = require('../swapiFunctions');
 const { getRandomInt } = require('./sharedService');
 
 const getWeightOnPlanetRandom = async(app, isWookiee) => {
-    const personId = getRandomInt(10);
-    const planetId = getRandomInt(10);
+    const personId = getRandomInt(1, 10);
+    const planetId = getRandomInt(1, 10);
     const person = await getPeopleById(app, personId, isWookiee);
     const planet = await getPlanetById(app, planetId, isWookiee);
 

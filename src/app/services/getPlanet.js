@@ -23,12 +23,21 @@ const getPlanetByIdRequest = async (app, id, isWookiee) => {
     let name, gravity;
     if (isWookiee) {
         name = data.whrascwo;
-        gravity = data.rrrcrahoahaoro;
+        gravity = getGravityNumber(data.rrrcrahoahaoro);
     } else {
         name = data.name;
-        gravity = data.gravity;
+        gravity = getGravityNumber(data.gravity);
     }
     return { name, gravity };
+}
+
+const getGravityNumber = (gravityString = '') => {
+    if (gravityString == null) return 0;
+    if (gravityString == undefined) return 0;
+    if (gravityString.length == 0) return 0;
+    const gravity = gravityString.substring(0, gravityString.indexOf(' '));
+    if (gravity.length == 0) return 0;
+    return parseFloat(gravity);
 }
 
 module.exports = {
